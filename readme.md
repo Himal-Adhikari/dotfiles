@@ -2,6 +2,7 @@
 - Jet Brains Mono NerdFont
 - Alacritty 
 - Nushell
+- Helix 
 
 # Paths
 - alacritty.yml -> ~\configs\alacritty.yml
