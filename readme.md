@@ -1,4 +1,4 @@
-## Prerequisites
+# Prerequisites
 - Jet Brains Mono NerdFont
 - Alacritty 
 - Nushell
