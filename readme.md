@@ -5,7 +5,7 @@
 - Helix 
 
 # Paths
-- alacritty.yml -> ~\configs\alacritty.yml
+- alacritty.yml -> ~\Appdata\Roaming\alacritty\alacritty.yml
 - env.nu -> echo $nu.env-path
 - config.nu -> echo $nu.config-path
 - starship.toml -> ~\\.config\starship.toml
