@@ -535,5 +535,5 @@ let-env config = {
   ]
 }
 
-source ~/.cache/starship/init.nu
-clear
+source ~/.zoxide.nu
+source ~/.oh-my-posh.nu

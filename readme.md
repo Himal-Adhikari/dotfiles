@@ -1,12 +1,11 @@
 # Prerequisites
 - Jet Brains Mono NerdFont
-- Alacritty 
+- Oh My Posh
 - Nushell
 - Helix 
 
 # Paths
-- alacritty.yml -> ~\Appdata\Roaming\alacritty\alacritty.yml
+- atomic.omp.json -> ~/themes/atomic.omp.json
 - env.nu -> echo $nu.env-path
 - config.nu -> echo $nu.config-path
-- starship.toml -> ~\\.config\starship.toml
 - config.toml -> ~\AppData\Roaming\helix\config.toml
