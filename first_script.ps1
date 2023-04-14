@@ -13,3 +13,4 @@ winget install hyperfine;
 winget install zoxide;
 winget install sharkdp.fd;
 winget install fzf;
+winget install SumatraPDF.SumatraPDF;
