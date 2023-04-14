@@ -1,0 +1,15 @@
+winget install KeePassXCTeam.KeePassXC;
+winget install VideoLAN.VLC;
+winget install qBittorrent.qBittorrent;
+winget install JanDeDobbeleer.OhMyPosh;
+winget install LLVM.LLVM;
+winget install 7zip.7zip;
+winget install Microsoft.PowerToys;
+winget install Microsoft.WindowsTerminal;
+winget install Notepad++.Notepad++;
+winget install Microsoft.VCRedist.2015+.x86;
+winget install nushell;
+winget install hyperfine;
+winget install zoxide;
+winget install sharkdp.fd;
+winget install fzf;
