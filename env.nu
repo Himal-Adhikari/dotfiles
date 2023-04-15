@@ -80,3 +80,5 @@ let-env NU_PLUGIN_DIRS = [
 #mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
 zoxide init nushell | save -f ~/.zoxide.nu
+let-env EDITOR = hx
+let-env FZF_DEFAULT_COMMAND = 'fd --type f'

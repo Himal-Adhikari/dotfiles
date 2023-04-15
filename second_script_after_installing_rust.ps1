@@ -3,7 +3,7 @@ scoop install tealdeer;
 scoop install sccache;
 scoop install ripgrep;
 scoop install helix;
-scoop install llvm;
+scoop install clangd;
 scoop install nu;
 scoop install hyperfine;
 scoop install zoxide;
