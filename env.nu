@@ -77,6 +77,6 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-# My Choice: atomic, blueish, craver, froczh, jblab_2021, microverse-power, multiverse-neon, takuya, wholespace, 
-oh-my-posh init nu --config ~/themes/atomic.omp.json
+#mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
 zoxide init nushell | save -f ~/.zoxide.nu
