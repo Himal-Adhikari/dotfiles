@@ -10,6 +10,7 @@ scoop install zoxide;
 scoop install fd;
 scoop install fzf;
 scoop install starship;
+scoop install gitui;
 cargo install --locked bacon;
 cargo install du-dust;
 cargo install speedtest-rs;
