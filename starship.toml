@@ -1,3 +1,6 @@
+#Linux = ""
+#Arch = ""
+#Windows = ""
 format = """
 [╭─](fg:#a3aed2 )\
 [  ](bg:#a3aed2 fg:#090c0c)\
@@ -21,8 +24,10 @@ $character"""
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 8
+truncate_to_repo = false
 truncation_symbol = "…/"
+"home_symbol" = ""
 
 [directory.substitutions]
 "Documents" = " "
@@ -40,6 +45,7 @@ style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
 [c]
+detect_extensions = ['c', 'h', 'cpp']
 symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
