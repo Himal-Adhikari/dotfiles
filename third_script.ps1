@@ -1,7 +1,9 @@
 mkdir ~\Himal\AppData\Roaming\nushell;
-cp config.nu ~\Himal\AppData\Roaming\nushell\config.nu;
-cp config.nu ~\Himal\AppData\Roaming\nushell\env.nu;
+cp config_files\config.nu ~\AppData\Roaming\nushell\config.nu;
+cp config_files\config.nu ~\AppData\Roaming\nushell\env.nu;
 mkdir ~\AppData\Roaming\helix\;
-cp config.toml ~\AppData\Roaming\helix\config.toml;
+cp config_files\config.toml ~\AppData\Roaming\helix\config.toml;
 mkdir ~\.config
-cp starship.toml ~\.config\starship.toml
+cp config_files\starship.toml ~\.config\starship.toml
+mkdir ~\AppData\Roaming\gitui\;
+cp config_files\theme.ron ~\AppData\Roaming\helix\theme.ron;
