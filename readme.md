@@ -1,5 +1,7 @@
-#Prerequisite
+## Prerequisite
 - Git
+- The [rust](https://www.rust-lang.org/learn/get-started) toolchain
+- [Scoop](https://scoop.sh/)
 
 Run the scripts and you will have a fully working system
 
