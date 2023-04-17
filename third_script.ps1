@@ -9,5 +9,6 @@ mkdir ~\.config
 cp config_files\starship.toml ~\.config\starship.toml
 mkdir ~\AppData\Roaming\gitui\;
 cp config_files\theme.ron ~\AppData\Roaming\gitui\theme.ron;
-mkdir ~\.cargo
-cp config_files\sccache_config.toml ~\.cargo\config.toml
+mkdir ~\.cargo;
+cp config_files\sccache_config.toml ~\.cargo\config.toml;
+cp -r nuscripts ~\nuscripts
