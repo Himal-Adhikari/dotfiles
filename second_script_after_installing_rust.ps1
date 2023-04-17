@@ -15,6 +15,5 @@ scoop install gitui;
 scoop install less;
 scoop install nodejs;
 scoop install 7zip;
-scoop install lf;
 cargo install du-dust;
 cargo install speedtest-rs;
