@@ -2,7 +2,6 @@ npm install -g typescript typescript-language-server;
 npm i -g vscode-langservers-extracted;
 mkdir ~\Himal\AppData\Roaming\nushell;
 cp config_files\config.nu ~\AppData\Roaming\nushell\config.nu;
-cp config_files\env.nu ~\AppData\Roaming\nushell\env.nu;
 mkdir ~\AppData\Roaming\helix\;
 cp config_files\hx_config.toml ~\AppData\Roaming\helix\config.toml;
 mkdir ~\.config
