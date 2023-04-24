@@ -1,7 +1,6 @@
 scoop bucket add extras;
 scoop install bat;
 scoop install tealdeer;
-scoop install sccache;
 scoop install ripgrep;
 scoop install helix;
 scoop install clangd;
