@@ -6,4 +6,5 @@ mkdir ~\.config
 cp config_files\starship.toml ~\.config\starship.toml
 mkdir ~\AppData\Roaming\gitui\;
 cp config_files\theme.ron ~\AppData\Roaming\gitui\theme.ron;
-cp -r nuscripts ~\nuscripts
+mkdir ~\nuscripts
+cp nuscripts\* nuscripts\
