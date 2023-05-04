@@ -1,29 +1,42 @@
 {
   "layer": "top",
-  "position": "top",
-  "mod": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "gtk-layer-shell": true,
-  "height": 0,
   "modules-left": [
-    "clock",
-    "wlr/workspaces"
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "custom/updates",
+    "network",
+    "tray"
   ],
   "modules-center": [
-    "hyprland/window"
+    "wlr/workspaces"
   ],
   "modules-right": [
-    "tray",
-    "custom/updates",
-    "custom/language",
-    "battery",
     "backlight",
     "pulseaudio",
-    "pulseaudio#microphone"
+    "clock",
+    "battery",
+    "custom/power"
   ],
-  "hyprland/window": {
-    "format": "{}"
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format-muted": " Muted",
+    "format": "{icon} {volume}%",
+    "on-click": "pamixer -t",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
   },
   "wlr/workspaces": {
     "disable-scroll": true,
@@ -43,33 +56,17 @@
       "10": []
     }
   },
-  "custom/updates": {
-    "format": " {}",
-    "interval": 7200, // every two hours
-    "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
-    "exec-if": "exit 0", // always run; consider advanced run conditions
-    "on-click": "kitty -e sudo pacman -Syu", // update system
-    "signal": 8
-  },
-  "tray": {
-    "icon-size": 13,
-    "spacing": 10
-  },
-  "clock": {
-    "format": "{: %R   %d/%m}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  "network": {
+    "tooltip": false,
+    "format-wifi": "  {essid}",
+    "format-ethernet": ""
   },
   "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ],
+    "tooltip": false,
+    "format": " {}%",
+    "interval": 1,
     "on-scroll-up": "brightnessctl set 1%+",
-    "on-scroll-down": "brightnessctl set 1%-",
-    "min-length": 6
+    "on-scroll-down": "brightnessctl set 1%-"
   },
   "battery": {
     "states": {
@@ -77,53 +74,49 @@
       "warning": 30,
       "critical": 20
     },
-    "format": "{icon} {capacity}%",
+    "format": "{icon}  {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   },
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "tooltip": false,
-    "format-muted": " Muted",
-    "on-click": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
-    "scroll-step": 5,
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
   },
-  "pulseaudio#microphone": {
-    "format": "{format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
-    "on-click": "pamixer --default-source -t",
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5
-  }
+  "clock": {
+    "format": "{: %I:%M %p   %d/%m/%Y}"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "rofi -show drun",
+    "on-click-right": "killall rofi"
+  },
+  "custom/power": {
+    "format": " ",
+    "on-click": "wlogout",
+  },
+  "custom/updates": {
+    "format": "<u>↓</u>  {}",
+    "exec": "yay -Qu | wc -l",
+    "exec-if": "exit 0",
+    "interval": 3600,
+    "on-click": "kitty -e 'yay'; killall -SIGUSR2 waybar",
+  },
 }
