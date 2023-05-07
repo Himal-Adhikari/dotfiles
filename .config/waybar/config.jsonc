@@ -2,8 +2,8 @@
   "layer": "top",
   "modules-left": [
     "custom/launcher",
-    "cpu",
     "memory",
+    "backlight",
     "custom/updates",
     "network",
     "tray"
@@ -12,7 +12,6 @@
     "wlr/workspaces"
   ],
   "modules-right": [
-    "backlight",
     "pulseaudio",
     "clock",
     "battery",
@@ -20,10 +19,11 @@
   ],
   "pulseaudio": {
     "tooltip": false,
-    "scroll-step": 5,
+    "scroll-step": 2,
     "format-muted": " Muted",
     "format": "{icon} {volume}%",
     "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -64,7 +64,6 @@
   "backlight": {
     "tooltip": false,
     "format": " {}%",
-    "interval": 1,
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-"
   },
@@ -93,15 +92,11 @@
   "clock": {
     "format": "{: %I:%M %p   %d/%m/%Y}"
   },
-  "cpu": {
-    "interval": 10,
-    "format": " {}%",
-    "max-length": 10
-  },
   "memory": {
-    "interval": 10,
-    "format": " {}%",
-    "max-length": 10
+    "interval": 5,
+    "format": "󰍛 {}%",
+    "max-length": 10,
+    "on-click": "kitty -e htop"
   },
   "custom/launcher": {
     "format": " ",

@@ -15,7 +15,8 @@ polkit-kde-agent qt5-wayland qt6-wayland waybar-hyprland hyprpaper udiskie bat b
 candy-icons-git dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji otf-font-awesome \
 qbittorrent ripgrep rofi-emoji starship swaylock-effects tealdeer thunar thunra-archive-plugin \
 ttf-jetbrains-mono-nerd typescript-language-server ungoogled-chromium-bin vlc xdg-user-dirs sddm-git \
-grim grimblast-git 
+grim grimblast-git vscode-json-languageserver vscode-html-languageserver vscode-css-languageserver \
+bash-language-server ffmpegthumbnailer tumbler rofi-calc mirage gvfs gvfs-mtp
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
