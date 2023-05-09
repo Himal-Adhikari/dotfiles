@@ -7,7 +7,7 @@
 
 Run the following command
 ```
-sudo chmod +x setup.sh
+chmod +x setup.sh
 ./setup.sh
 ```
 Restart the terminal after that and execute the following command
