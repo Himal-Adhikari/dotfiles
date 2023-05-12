@@ -6,3 +6,4 @@
 . "$HOME/.cargo/env"
 
 export QT_STYLE_OVERRIDE=kvantum
+export EDITOR=hx
