@@ -25,7 +25,6 @@ window#waybar.hidden {
   background: transparent;
 }
 
-
 #workspaces button {
   padding: 5px;
   color: #313244;
@@ -60,18 +59,6 @@ window#waybar.hidden {
   background: #11111b;
   color: #cdd6f4;
   border-radius: 10px;
-}
-
-#network {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #bd93f9;
 }
 
 #pulseaudio {

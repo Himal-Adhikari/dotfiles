@@ -5,15 +5,14 @@
     "memory",
     "backlight",
     "custom/updates",
-    "network",
     "tray",
   ],
   "modules-center": [
-    "wlr/workspaces"
+    "clock",
   ],
   "modules-right": [
+    "wlr/workspaces",
     "pulseaudio",
-    "clock",
     "battery",
     "custom/power"
   ],
@@ -21,7 +20,6 @@
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
-    //"format": "{icon}",
     "persistent_workspaces": {
       "1": [],
       "2": [],
@@ -56,11 +54,6 @@
       ]
     }
   },
-  "network": {
-    "tooltip": false,
-    "format-wifi": "  {essid}",
-    "format-ethernet": ""
-  },
   "backlight": {
     "tooltip": false,
     "format": " {}%",
@@ -76,7 +69,7 @@
     "format": "{icon}  {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
-    "format-alt": "{time} {icon}",
+    // "format-alt": "{time} {icon}",
     "format-icons": [
       "",
       "",
