@@ -8,10 +8,10 @@
     "tray",
   ],
   "modules-center": [
-    "clock",
+    "wlr/workspaces",
   ],
   "modules-right": [
-    "wlr/workspaces",
+    "clock",
     "pulseaudio",
     "battery",
     "custom/power"

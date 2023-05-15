@@ -19,20 +19,30 @@ if [ $? -eq 0]; then
   yay -R --noconfirm swaylock
 fi
 
+# Checks if waybar exists
+exit=$( which waybar 2>&1 )
+if [ $? -eq 0]; then
+  # Removes it to install waybar-hyprland-git if it exists
+  yay -R --noconfirm waybar
+fi
+
+yay -Syu --noconfirm
+
 # All the apps
-yay -S --noconfirm hyprland xdg-desktop-portal-hyprland kitty dunst pipewire-pulse noto-fonts pipewire \
-polkit-kde-agent waybar-hyprland hyprpaper udiskie bat brightnessctl wl-clipboard ffmpeg man-pages man-db \
-candy-icons-git dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji otf-font-awesome \
+yay -S --noconfirm hicolor-icon-theme hyprland xdg-desktop-portal-hyprland kitty dunst noto-fonts \
+polkit-kde-agent waybar-hyprland-git hyprpaper udiskie bat brightnessctl wl-clipboard ffmpeg man-pages man-db \
+candy-icons-git dracula-gtk-theme dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji \
 qbittorrent ripgrep rofi-emoji starship swaylock-effects tealdeer thunar thunar-archive-plugin \
-ttf-jetbrains-mono-nerd vlc xdg-user-dirs sddm keepassxc gvfs librewolf-bin wireplumber \
+ttf-jetbrains-mono-nerd vlc xdg-user-dirs sddm-git keepassxc gvfs librewolf-bin gnu-free-fonts \
 grim grimblast-git ffmpegthumbnailer xf86-video-intel kate bluez-utils blueman bluez wlogout \
-ffmpegthumbnailer tumbler rofi-calc mirage gvfs-mtpw sweet-cursor-theme-git noto-fonts-cjk \
-nwg-look-bin rar file-roller kvantum zoxide kvantum-theme-sweet-git network-manager-applet \
-sweet-gtk-theme-nova-git pavucontrol pamixer tor tor-browser \
+nwg-look-bin rar file-roller kvantum network-manager-applet htop kvantum-theme-orchis-git orchis-theme \
+ffmpegthumbnailer tumbler rofi-calc mirage gvfs-mtp noto-fonts-cjk tor-browser tor intel-media-driver \
+pavucontrol pamixer zoxide otf-font-awesome libva-intel-driver \
 
 cp .bash_profile ~/
 cp -r Pictures ~/
-cp -r .librewolf ~/
+mkdir -p ~/.librewolf
+cp -r .librewolf/librewolf.overrides.cfg ~/.librewolf/
 cp -r .config/* ~/.config/
 
 # Rust
