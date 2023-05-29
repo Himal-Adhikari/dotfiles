@@ -12,6 +12,8 @@ if [ $? -ne 0 ]; then
   rm -rf yay-bin
 fi
 
+yay -Syu --noconfirm
+
 # Checks if swaylock exists
 exit=$( which swaylock 2>&1 )
 if [ $? -eq 0]; then
@@ -26,24 +28,23 @@ if [ $? -eq 0]; then
   yay -R --noconfirm waybar
 fi
 
-yay -Syu --noconfirm
-
 # All the apps
 yay -S --noconfirm hicolor-icon-theme hyprland xdg-desktop-portal-hyprland kitty dunst noto-fonts \
 polkit-kde-agent waybar-hyprland-git hyprpaper udiskie bat brightnessctl wl-clipboard ffmpeg man-pages man-db \
-candy-icons-git dracula-gtk-theme dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji \
+candy-icons-git dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji zoxide \
 qbittorrent ripgrep rofi-emoji starship swaylock-effects tealdeer thunar thunar-archive-plugin \
 ttf-jetbrains-mono-nerd vlc xdg-user-dirs sddm-git keepassxc gvfs librewolf-bin gnu-free-fonts \
 grim grimblast-git ffmpegthumbnailer xf86-video-intel kate bluez-utils blueman bluez wlogout \
-nwg-look-bin rar file-roller kvantum network-manager-applet htop kvantum-theme-orchis-git orchis-theme \
-ffmpegthumbnailer tumbler rofi-calc mirage gvfs-mtp noto-fonts-cjk tor-browser tor intel-media-driver \
-pavucontrol pamixer zoxide otf-font-awesome libva-intel-driver \
+nwg-look-bin rar file-roller kvantum network-manager-applet htop sddm-sugar-candy-git pavucontrol \
+ffmpegthumbnailer tumbler rofi-calc eog gvfs-mtp noto-fonts-cjk tor-browser tor intel-media-driver \
+pamixer otf-font-awesome libva-intel-driver \
 
 cp .bash_profile ~/
 cp -r Pictures ~/
 mkdir -p ~/.librewolf
 cp -r .librewolf/librewolf.overrides.cfg ~/.librewolf/
 cp -r .config/* ~/.config/
+sudo cp sddm.conf /etc/sddm.conf
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
