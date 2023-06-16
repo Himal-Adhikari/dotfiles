@@ -25,12 +25,6 @@ window#waybar.hidden {
   background: transparent;
 }
 
-#workspaces button {
-  padding: 5px;
-  color: #313244;
-  margin-right: 5px;
-}
-
 #workspaces {
   margin-top: 6px;
   background: #1e1e2e;
@@ -40,26 +34,34 @@ window#waybar.hidden {
   padding-left: 5px;
 }
 
-#workspaces button.active {
-  color: #a6adc8;
+#workspaces button:nth-child(1) label {
+  color: #8aadf4;
+  margin: 0px 8px;
 }
 
-#workspaces button.focused {
-  color: #a6adc8;
-  background: #eba0ac;
-  border-radius: 10px;
+#workspaces button:nth-child(2) label {
+  color: #ed8796;
+  margin: 0px 8px;
 }
 
-#workspaces button.urgent {
-  color: #11111b;
-  background: #a6e3a1;
-  border-radius: 10px;
+#workspaces button:nth-child(3) label {
+  color: #a6da95;
+  margin: 0px 8px;
 }
 
-#workspaces button:hover {
-  background: #11111b;
-  color: #cdd6f4;
-  border-radius: 10px;
+#workspaces button:nth-child(4) label {
+  color: #c6a0f6;
+  margin: 0px 8px;
+}
+
+#workspaces button:nth-child(5) label {
+  color: #f4dbd6;
+  margin: 0px 8px;
+}
+
+#workspaces button:nth-child(6) label {
+  color: #f5a97f;
+  margin: 0px 8px;
 }
 
 #pulseaudio {
@@ -184,18 +186,6 @@ window#waybar.hidden {
   background: #F28FAD;
 }
 
-#custom-wallpaper {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #C9CBFF;
-}
-
 #custom-updates {
   margin-top: 6px;
   margin-left: 8px;
@@ -206,16 +196,4 @@ window#waybar.hidden {
   transition: none;
   color: #161320;
   background: #E8A2AF;
-}
-
-#custom-media {
-  margin-top: 6px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #F2CDCD;
 }
