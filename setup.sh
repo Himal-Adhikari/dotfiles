@@ -38,7 +38,7 @@ ripgrep rofi-emoji starship swaylock-effects tealdeer thunar thunar-archive-plug
 ttf-jetbrains-mono-nerd vlc xdg-user-dirs sddm keepassxc gvfs librewolf-bin gnu-free-fonts \
 grim grimblast-git ffmpegthumbnailer bluez-utils blueman bluez wlogout wl-clip-persist-git \
 nwg-look-bin file-roller kvantum network-manager-applet htop sddm-sugar-candy-git pavucontrol \
-tumbler rofi-calc eog gvfs-mtp noto-fonts-cjk pamixer otf-font-awesome \
+tumbler rofi-calc eog gvfs-mtp noto-fonts-cjk pamixer otf-font-awesome prettier \
 
 cp .bash_profile ~/
 cp -r Pictures ~/
