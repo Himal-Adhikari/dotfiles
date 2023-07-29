@@ -32,13 +32,13 @@ fi
 
 # All the apps
 yay -S --noconfirm hicolor-icon-theme hyprland xdg-desktop-portal-hyprland kitty dunst noto-fonts \
-polkit-kde-agent waybar-hyprland-git hyprpaper udiskie bat brightnessctl wl-clipboard ffmpeg man-pages man-db \
+polkit-kde-agent waybar-hyprland-git udiskie bat brightnessctl wl-clipboard ffmpeg man-pages man-db \
 candy-icons-git dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji zoxide evince \
 ripgrep rofi-emoji starship swaylock-effects tealdeer thunar thunar-archive-plugin imagemagick \
 ttf-jetbrains-mono-nerd vlc xdg-user-dirs sddm keepassxc gvfs librewolf-bin gnu-free-fonts \
 grim grimblast-git ffmpegthumbnailer bluez-utils blueman bluez wlogout wl-clip-persist-git \
 nwg-look-bin file-roller kvantum network-manager-applet htop sddm-sugar-candy-git pavucontrol \
-tumbler rofi-calc eog gvfs-mtp noto-fonts-cjk pamixer otf-font-awesome prettier \
+tumbler rofi-calc eog gvfs-mtp noto-fonts-cjk pamixer otf-font-awesome prettier swaybg \
 
 cp .bash_profile ~/
 cp -r Pictures ~/
@@ -52,6 +52,7 @@ xdg-user-dirs-update
 sudo systemctl enable sddm.service
 sudo systemctl enable bluetooth.service
 sudo ln -s /usr/bin/helix /usr/bin/hx
+sudo ln -s /usr/bin/rofi /usr/bin/dmenu
 bat cache --build
 tldr -u
 
