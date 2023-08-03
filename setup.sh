@@ -31,17 +31,16 @@ if [[ $? -eq $success_status ]]; then
 fi
 
 # All the apps
-yay -S --noconfirm hicolor-icon-theme hyprland xdg-desktop-portal-hyprland kitty dunst noto-fonts \
-polkit-kde-agent waybar-hyprland-git udiskie bat brightnessctl wl-clipboard ffmpeg man-pages man-db \
-candy-icons-git dust exa fd fish fzf github-cli gitui helix hyperfine noto-fonts-emoji zoxide evince \
+yay -S --noconfirm noto-fonts noto-fonts-emoji noto-fonts-cjk \
+polkit-kde-agent waybar-hyprland-git udiskie bat brightnessctl wl-clipboard man-pages man-db \
+candy-icons-git dust exa fd fish fzf github-cli gitui helix zoxide evince dmenu \
 ripgrep rofi-emoji starship swaylock-effects tealdeer thunar thunar-archive-plugin imagemagick \
-ttf-jetbrains-mono-nerd vlc xdg-user-dirs sddm keepassxc gvfs librewolf-bin gnu-free-fonts \
-grim grimblast-git ffmpegthumbnailer bluez-utils blueman bluez wlogout wl-clip-persist-git \
-nwg-look-bin file-roller kvantum network-manager-applet htop sddm-sugar-candy-git pavucontrol \
-tumbler rofi-calc eog gvfs-mtp noto-fonts-cjk pamixer otf-font-awesome prettier swaybg \
+ttf-jetbrains-mono-nerd vlc xdg-user-dirs keepassxc gvfs librewolf-bin \
+grim grimblast-git ffmpegthumbnailer blueman bluez wlogout hunspell-en_US speech-dispatcher \
+nwg-look-bin file-roller kvantum network-manager-applet sddm-sugar-candy-git pavucontrol \
+tumbler rofi-calc eog gvfs-mtp pamixer otf-font-awesome prettier swaybg \
 
 cp .bash_profile ~/
-cp -r Pictures ~/
 cp -r .config/* ~/.config/
 sudo cp sddm.conf /etc/sddm.conf
 
@@ -49,10 +48,9 @@ sudo cp sddm.conf /etc/sddm.conf
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 xdg-user-dirs-update 
-sudo systemctl enable sddm.service
 sudo systemctl enable bluetooth.service
 sudo ln -s /usr/bin/helix /usr/bin/hx
-sudo ln -s /usr/bin/rofi /usr/bin/dmenu
 bat cache --build
 tldr -u
 
+yay -S --noconfirm wl-clip-persit-git 
