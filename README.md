@@ -2,7 +2,6 @@
 
 # Prerequisite
   - Git
-  - BaseDevel
 
 Run the following command
 ```bash

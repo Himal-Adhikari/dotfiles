@@ -1,0 +1,162 @@
+{
+  "layer": "top",
+  "height": 35,
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-bottom": 0,
+  "margin-right": 10,
+  "spacing": 0,
+
+  "modules-left": [
+    "custom/launcher",
+    "custom/separator",
+    "cpu",
+    "memory",
+    "battery",
+    "temperature"
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "backlight",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "custom/dot",
+    "custom/separator",
+    "network",
+    "custom/dot",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 8
+  },
+  "custom/filler": {
+    "format": " "
+  },
+  "custom/dot": {
+    "format": " "
+  },
+
+  "clock": {
+    "format": "<b>{:%I:%M %p }</b>",
+    "format-alt": "<b>{:%a.%d,%b}</b>",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}% ",
+    "max-length": 10,
+    "on-click": "kitty -e htop"
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}% ",
+    "max-length": 10,
+    "on-click-right": "kitty -e htop"
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": " {}% ",
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-"
+  },
+  "network": {
+    "format-wifi": "󰒢 {essid}",
+    "format-alt": "󰒢 {bandwidthTotalBits}",
+    "on-click-right": "kitty -e nmtui",
+    "format-ethernet": "󰈁 wired",
+    "tooltip-format": "{essid} {signalStrength}%",
+    "format-disconnected": ""
+  },
+
+  "pulseaudio": {
+    "format": "{icon} <b>{volume}</b>",
+    "format-bluetooth": " {volume}",
+    "format-bluetooth-muted": " ",
+    "tooltip": false,
+    "format-muted": "",
+    "format-icons": {
+      "default": ["󰝟", "", "󰕾", ""]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}% ",
+    "format-charging": " {capacity}% ",
+    "format-plugged": " {capacity}% ",
+    // "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "custom/right-arr": {
+    "format": "  "
+  },
+  "custom/launcher": {
+    "format": " 󰣇",
+    "on-click": "rofi -show drun",
+    "on-click-right": "killall rofi"
+  },
+  "custom/separator": {
+    "format": " "
+  },
+  "custom/window-name": {
+    "format": " <b>{}</b>",
+    "interval": 1,
+    "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
+  },
+
+  "custom/window-icon": {},
+
+  "temperature": {
+    "thermal-zone": 0,
+    "critical-threshold": 80,
+    "format-critical": " {temperatureC}°C",
+    "format": " {temperatureC}°C"
+  },
+
+  "custom/wrap-left": {
+    "format": "<b>[</b>"
+  },
+
+  "custom/wrap-right": {
+    "format": "<b>]</b>"
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "on-click-right": "pavucontrol",
+    "scroll-step": 5
+  }
+}
