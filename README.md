@@ -7,3 +7,5 @@
 - Better cd: [zoxide](https://github.com/ajeetdsouza/zoxide)
 - Cat alternative: [bat](https://github.com/sharkdp/bat)
 - A utility for seeing tldr's of binaries: [Tealdeer](https://tealdeer-rs.github.io/tealdeer/installing.html)
+- Terminal Multiplexer: [Tmux](https://github.com/tmux/tmux/wiki/Installing)
+- Terminal File Manager: [Yazi](https://github.com/sxyazi/yazi)

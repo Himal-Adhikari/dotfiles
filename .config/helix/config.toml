@@ -12,11 +12,9 @@ enable = true
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
-C-l = [":toggle lsp.display-inlay-hints"]
+A-l = [":toggle lsp.display-inlay-hints"]
 J = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 K = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-C-b = [":sh cargo b"]
-C-r = [":sh cargo r"]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -28,4 +26,3 @@ display-messages = true
 
 [keys.insert]
 C-s = ["normal_mode" , ":w"]
-
